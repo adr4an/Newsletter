@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root {
+    --Tomato: hsl(4, 100%, 67%);
+    --Dark: hsl(234, 29%, 20%);
+    --Charcoal: hsl(235, 18%, 26%);
+    --Grey: hsl(231, 7%, 60%);
+    --White: hsl(0, 0%, 100%);
+}
+
+* {
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    
+    background: var(--Charcoal);
+}
+
+.container {
+    display: flex;
+    background: #fff;
+    border-radius: 40px;
+}
+
+.container .left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 20px;
+    padding: 50px;
+    width: 600px;
+}
+
+.container h3 {
+    font-size: 50px;
+}
+
+.container p {
+    font-size: 18px;
+}
+/* img */
+.container .right img {    
+    padding: 20px;
+    border-radius: 15px;
+    width: 390px;
+    object-fit: cover;
+}
+
+.item-list {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.item-list span {
+    padding: 0 15px;
+}
+
+form {
+    width: 100%;
+}
+
+form input {
+    border: 1px solid gray;
+    border-radius: 5px;
+    height: 45px;
+    width: 100%;
+    padding-left: 15px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+form input:focus {
+    outline: 1px solid black;
+}
+
+form h5 {
+    font-size: 18px;
+    padding-bottom: 10px;
+}
+
+a {
+    text-decoration: none;
+    width: 100%;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    background: var(--Charcoal);
+    color: #fff;
+    padding: 17px 0;
+    width: 100%;
+    font-weight: 700;
+    letter-spacing: .5px;
+    margin-top: 5px;
+    transition: .3s ease;
+}
+
+button:hover {
+    background: var(--Tomato);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+}
+
+@media screen and (max-width: 376px) {
+
+    .container {
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        padding: 0;
+        margin: 0;
+    }
+
+    .container .left {
+        width: 100%;
+        padding: 40px;
+        gap: 15px;
+    }
+
+
+    .container .left p {
+        font-size: 17px;
+    }
+
+    .container .right {
+        padding: 0;
+        max-width: 99%;
+        height: 100%;
+        height: auto;
+        z-index: 0;
+    }
+
+    .container h3 {
+        font-size: 35px;
+    }
+    
+    form h5 {
+        margin-top: 15px;
+        font-size: 16px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+
+}
